@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Happy 18th Birthday, Jannat! 🎂</title>
+<meta name="description" content="A birthday surprise for Jannat's 18th birthday" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎉</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800;900&family=Meow+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<canvas id="confetti-canvas"></canvas>
+<div class="balloons" id="balloons"></div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="sparkles" aria-hidden="true"></div>
+    <p class="eyebrow">✨ A little surprise for you ✨</p>
+    <h1 class="script">Happy Birthday</h1>
+    <h2 class="name">Jannat</h2>
+    <div class="age-badge">
+      <span class="age-number">18</span>
+      <span class="age-label">years<br>old today</span>
+    </div>
+    <p class="hero-sub">30th August · The day you officially became an adult 🎉</p>
+    <a href="#gallery" class="scroll-cue" aria-label="Scroll down">
+      <span>Scroll for the good stuff</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+  <!-- MESSAGE -->
+  <section class="message-section">
+    <div class="card">
+      <span class="quote-mark">"</span>
+      <p class="message-text">
+        Eighteen looks so good on you, Jannat! Here's to leaving your teenage years
+        with all the beautiful memories, laughs, and chaos that came with them —
+        and stepping into this new chapter with even more to look forward to.
+        Wishing you a birthday as sweet and wonderful as you are. 🎂💛
+      </p>
+      <p class="signature">With love, your favorite people</p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery-section">
+    <h3 class="section-title">📸 Memories</h3>
+    <div class="gallery-grid">
+      <div class="gallery-item" data-index="0">
+        <img src="assets/images/photo4.jpg" alt="Jannat smiling" loading="lazy" />
+      </div>
+      <div class="gallery-item" data-index="1">
+        <img src="assets/images/photo1.jpg" alt="Jannat memory" loading="lazy" />
+      </div>
+      <div class="gallery-item" data-index="2">
+        <img src="assets/images/photo2.jpg" alt="Jannat memory" loading="lazy" />
+      </div>
+      <div class="gallery-item" data-index="3">
+        <img src="assets/images/photo3.jpg" alt="Jannat memory" loading="lazy" />
+      </div>
+      <div class="gallery-item" data-index="4">
+        <img src="assets/images/photo5.jpg" alt="Jannat memory" loading="lazy" />
+      </div>
+      <div class="gallery-item" data-index="5">
+        <img src="assets/images/photo6.jpg" alt="Jannat memory" loading="lazy" />
+      </div>
+      <div class="gallery-item" data-index="6">
+        <img src="assets/images/photo7.jpg" alt="Jannat memory" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section class="video-section">
+    <h3 class="section-title">🎬 Little Moments</h3>
+    <div class="video-stack">
+      <div class="video-wrap">
+        <video controls playsinline preload="metadata" poster="">
+          <source src="assets/videos/video1.mp4" type="video/mp4" />
+          Your browser doesn't support video playback.
+        </video>
+      </div>
+      <div class="video-wrap">
+        <video controls playsinline preload="metadata" poster="">
+          <source src="assets/videos/video2.mp4" type="video/mp4" />
+          Your browser doesn't support video playback.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- WISHES -->
+  <section class="wishes-section">
+    <h3 class="section-title">💌 Birthday Wishes</h3>
+    <div class="wishes-list">
+      <div class="wish-card">🎈 May this year bring you endless joy and adventures.</div>
+      <div class="wish-card">🌟 May all your dreams start turning into plans.</div>
+      <div class="wish-card">💛 May you always stay this kind, this bright, this you.</div>
+      <div class="wish-card">🥳 Happy 18th, Jannat — go make it unforgettable!</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Made with 💛 from Bilal</p>
+    <p class="footer-date">30 · 08 · 2026</p>
+  </footer>
+
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="Full size memory" />
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
