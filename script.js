@@ -1,3 +1,45 @@
+// ---------- BACKGROUND MUSIC ----------
+(function bgMusic() {
+  const iframe = document.getElementById('bg-music');
+  const toggleBtn = document.getElementById('music-toggle');
+  const icon = document.getElementById('music-icon');
+  let unmuted = false;
+
+  function post(func) {
+    iframe.contentWindow.postMessage(JSON.stringify({ event: 'command', func, args: [] }), '*');
+  }
+
+  function unmuteAndPlay() {
+    if (unmuted) return;
+    unmuted = true;
+    post('unMute');
+    post('playVideo');
+    icon.textContent = '🔊';
+    toggleBtn.setAttribute('aria-pressed', 'true');
+  }
+
+  function toggleMusic() {
+    if (unmuted) {
+      unmuted = false;
+      post('mute');
+      icon.textContent = '🔇';
+      toggleBtn.setAttribute('aria-pressed', 'false');
+    } else {
+      unmuteAndPlay();
+    }
+  }
+
+  // Unmute the instant she interacts with the page in any way
+  ['click', 'touchstart', 'keydown', 'scroll'].forEach(evt => {
+    document.addEventListener(evt, unmuteAndPlay, { once: true, passive: true });
+  });
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMusic();
+  });
+})();
+
 // ---------- BALLOONS ----------
 (function spawnBalloons() {
   const container = document.getElementById('balloons');
